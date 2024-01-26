@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/normalize.css">
+    <link rel="stylesheet" href="../style/css.css">
+    <title>Ternuritas en la Web</title>
+</head>
+
+<body>
+    <main class="contenedor contenedor-medio">
+        <br>
+        <h1 style="text-align: center;">Cargar Producto</h1>
+        <br><br>
+        <form action="carga_producto.php" method="post" enctype="multipart/form-data" class="formulario-pedido">
+            <label class="label" for="nombreProducto">Nombre del Producto:</label>
+            <input class="input" type="text" name="nombreProducto" required><br>
+
+            <label class="label" for="precio">Precio:</label>
+            <input class="input" type="number" name="precio" required><br>
+
+            <label class="label" for="descripcion">Descripción del Producto:</label>
+            <input class="input" type="text" name="descripcion" required><br>
+
+            <label class="label" for="imagen">Imagen (Formatos permitidos: JPG, JPEG, PNG):</label>
+            <input class="input" type="file" name="imagen" accept=".jpg, .jpeg, .png" required><br>
+
+            <label class="label" for="categoria">Categoría del Producto:</label>
+            <select class="input" name="categoria" id="categoria" required>
+                <option value="1">Muñeco</option>
+                <option value="2">Llavero</option>
+                <option value="3">Ramo</option>
+            </select><br>
+
+            <label class="label" for="stock">Stock:</label>
+            <input class="input" type="number" name="stock" value="0"><br>
+            
+            <input type="submit" value="Cargar Producto">
+        </form>
+    </main>
+</body>
+
+</html>
